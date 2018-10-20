@@ -21,7 +21,7 @@ char	**ft_strsplit(char const *str, char c)
 
 	if (!str)
 		return (NULL);
-	if (!(result = (char **)malloc(sizeof(char*) * (countw(str, c) + 1))))
+	if (!(result = (char **)ft_memalloc(sizeof(char*) * (countw(str, c) + 1))))
 		return (NULL);
 	i = 0;
 	k = 0;
@@ -30,7 +30,7 @@ char	**ft_strsplit(char const *str, char c)
 		j = 0;
 		while (str[k] == c && str[k] != '\0')
 			k++;
-		if (!(result[i] = (char*)malloc(sizeof(char) * counts(str, c, k) + 1)))
+		if (!(result[i] = (char*)ft_memalloc(sizeof(char) * counts(str, c, k) + 1)))
 			return (NULL);
 		while (str[k] != c && str[k] != '\0')
 			result[i][j++] = str[k++];
