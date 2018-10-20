@@ -16,6 +16,13 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# define BUFF_SIZE 2
+# include <stdlib.h>
+# include <fcntl.h>
+# include <sys/stat.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <stdio.h>
 
 typedef	struct		s_list
 {
@@ -91,5 +98,6 @@ int					counts(char const *str, char c, int k);
 int					ft_int_min_extra4(int n);
 int					ft_count_int_extra5(int n);
 char				**ft_strsplit(char const *str, char c);
+int					get_next_line (const int fd, char **line);
 
 #endif
