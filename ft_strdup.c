@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s1)
 	{
 		i++;
 	}
-	mal = (char *)malloc(sizeof(char) * (i + 1));
+	mal = (char *)ft_memalloc(sizeof(char) * (i + 1));
 	if (!mal)
 		return (NULL);
 	i = 0;
